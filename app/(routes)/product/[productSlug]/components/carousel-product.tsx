@@ -6,7 +6,7 @@ import {
   CarouselPrevious,
   CarouselNext,
 } from "@/components/ui/carousel";
-const backendUrl = process.env.NEXT_PUBLIC_BACKEND_URL;
+
 interface CarouselProductProps {
   images: Array<{
     url: any;
@@ -27,7 +27,7 @@ const CarouselProduct = (props: CarouselProductProps) => {
           {images.map((image) => (
             <CarouselItem key={image.id}>
               <img
-                src={backendUrl+`${image.url}`}
+                src={`${image.url}`}
                 alt="Image product"
                 className="rounded-lg"
               />

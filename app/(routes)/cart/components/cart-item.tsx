@@ -5,7 +5,7 @@ import { formatPrice } from "@/lib/formatPrice";
 import { cn } from "@/lib/utils";
 import { ProductType } from "@/types/product";
 import { X } from "lucide-react";
-const backendUrl = process.env.NEXT_PUBLIC_BACKEND_URL;
+
 
 interface CartItemProps {
     product: ProductType
@@ -17,7 +17,7 @@ const CartItem = (props: CartItemProps) => {
 
     return (
         <li className="flex py-6 border-b">
-            <ProductImageMinuature slug={product.slug} url={backendUrl+product.images[0].url} />
+            <ProductImageMinuature slug={product.slug} url={product.images[0].url} />
 
             <div className="flex justify-between flex-1 px-6">
                 <div>

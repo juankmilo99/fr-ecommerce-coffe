@@ -1,6 +1,6 @@
 /* eslint-disable @next/next/no-img-element */
 "use client";
-const backendUrl = process.env.NEXT_PUBLIC_BACKEND_URL;
+
 
 import { useGetCategories } from "@/api/getProducts";
 import Link from "next/link";
@@ -26,7 +26,7 @@ const ChooseCategory = () => {
               className="relative max-w-xs mx-auto overflow-hidden bg-no-repeat bg-cover rounded-lg"
             >
               <img
-                src={backendUrl+`${category.mainImage.url}`}
+                src={`${category.mainImage.url}`}
                 alt={category.slug}
                 className="max-w-[270px] transition duration-300 ease-in-out rounded-lg hover:scale-110"
               />

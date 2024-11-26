@@ -2,7 +2,6 @@
 import { Expand, ShoppingCart } from "lucide-react";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
-const backendUrl = process.env.NEXT_PUBLIC_BACKEND_URL;
 
 import { formatPrice } from "@/lib/formatPrice";
 import { ProductType } from "@/types/product";
@@ -51,7 +50,7 @@ const ProductCard = (props: ProductCardProps) => {
           {product.images.map((image) => (
             <CarouselItem key={image.id} className="group">
               <img
-                src={backendUrl+`${image.url}`}
+                src={`${image.url}`}
                 alt="Image"
                 className="rounded-xl"
               />

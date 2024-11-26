@@ -9,7 +9,7 @@ import { cn } from "@/lib/utils";
 import { ProductType } from "@/types/product";
 import { X } from "lucide-react";
 import { useRouter } from "next/navigation";
-const backendUrl = process.env.NEXT_PUBLIC_BACKEND_URL;
+
 interface LovedItemProductProps {
     product: ProductType
 }
@@ -28,7 +28,7 @@ const LovedItemProduct = (props: LovedItemProductProps) => {
 
     return (
         <li className="flex p-6 border-b">
-            <ProductImageMinuature slug={product.slug} url={backendUrl+product.images[0].url} />
+            <ProductImageMinuature slug={product.slug} url={product.images[0].url} />
 
             <div className="flex justify-between flex-1 px-6">
                 <div>
